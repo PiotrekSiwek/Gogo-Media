@@ -1,0 +1,55 @@
+@import "../scss/mixins";
+
+.main {
+  height: 526px;
+  background: rgba(241, 246, 252, 1);
+
+  &__title {
+    @include title;
+    color: rgba(45, 50, 54, 1);
+  }
+
+  &__subtitle {
+    @include subtitle;
+    color: rgba(45, 50, 54, 1);
+  }
+}
+
+.articles-title {
+  font-family: Rubik, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-top: 36px;
+}
+
+.articles-box {
+  height: 228px;
+  width: 1036px;
+  display: flex;
+  margin: 40px auto 0;
+}
+
+@media (max-width: 1200px) {
+  .main {
+    height: 750px;
+  }
+  .articles-box {
+    height: 500px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 710px) {
+  .main {
+    height: 1026px;
+  }
+  .articles-box {
+    height: 750px;
+  }
+}

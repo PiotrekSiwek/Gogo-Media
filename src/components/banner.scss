@@ -1,0 +1,151 @@
+@import "../scss/mixins";
+
+.section-banner {
+  background: #215398;
+  height: 466px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 32px;
+    height: 40px;
+    background: url("../assets/dot.svg") center;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -40%);
+  }
+}
+
+.banner {
+  &__title {
+    @include title;
+  }
+
+  &__subtitle {
+    @include subtitle;
+  }
+}
+
+.slider {
+  height: 228px;
+  width: 1036px;
+  margin: 40px auto 0;
+  position: relative;
+
+  &__leftBtn {
+    @include buttonArrows;
+    background: rgba(255, 255, 255, 0.05) url("../assets/left-arrow.svg") no-repeat center;
+    left: -60px;
+
+    &:hover {
+      border: 2px solid #28A9E0;
+    }
+  }
+
+  &__rightBtn {
+    @include buttonArrows;
+    background: rgba(255, 255, 255, 0.05) url("../assets/right-arrow.svg") no-repeat center;
+    right: -60px;
+
+    &:hover {
+      border: 2px solid #28A9E0;
+    }
+  }
+}
+
+.slideshow {
+  height: 228px;
+  width: 1036px;
+  position: relative;
+  overflow: hidden;
+
+  &__box {
+    display: flex;
+    width: 3105px;
+    position: absolute;
+    transition: 0.3s;
+  }
+}
+
+.slideshow-anim-right {
+  animation: slide-right 2s ease-in-out;
+}
+
+.slideshow-anim-left {
+  animation: slide-left 2s ease-in-out;
+}
+
+@keyframes slide-right {
+  from {
+    left: -345px;
+  }
+  to {
+    left: -1035px
+  }
+}
+
+@keyframes slide-left {
+  from {
+    left: -1725px;
+  }
+  to {
+    left: -1035px
+  }
+}
+
+@media (max-width: 1200px) {
+  .slideshow {
+    width: 690px;
+  }
+
+  .slider {
+    width: 690px;
+  }
+}
+
+@media (max-width: 850px) {
+  .slideshow {
+    width: 345px;
+  }
+
+  .slider {
+    width: 345px;
+  }
+}
+
+@media (max-width: 540px) {
+  .section-banner {
+    height: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .slideshow {
+    width: 333px;
+  }
+  .slider {
+    width: 333px;
+
+    &__leftBtn {
+      left: -12px;
+    }
+
+    &__rightBtn {
+      right: -22px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .slider {
+
+    &__leftBtn {
+      left: 5px;
+    }
+
+    &__rightBtn {
+      right: 2px;
+    }
+  }
+}

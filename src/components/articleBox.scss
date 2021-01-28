@@ -1,0 +1,42 @@
+.article {
+  height: 228px;
+  width: 332px;
+  background: #FFFFFF;
+  padding-left: 27px;
+  padding-right: 28px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+
+  &__title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    padding-top: 36px;
+    color: rgba(45, 50, 54, 1)
+  }
+
+  &__text {
+    margin-top: 12px;
+    color: rgba(128, 128, 128, 1);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  &__picture {
+    margin-top: 12px;
+    height: 42px;
+    width: 42px;
+  }
+}
+
+@media (max-width: 400px) {
+  .article {
+    margin-left: 3px;
+  }
+}
