@@ -1,7 +1,7 @@
 
 ### Zadanie Rekrutacyjne GogoMedia
 
-Zadanie zrobione przy użyciu Frameworka.
+Zadanie zrobione przy użyciu Frameworka React
 
 ### Instalacja
 
